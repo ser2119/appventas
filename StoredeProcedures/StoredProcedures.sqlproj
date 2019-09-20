@@ -60,5 +60,22 @@
   </ItemGroup>
   <ItemGroup>
     <Build Include="sp_mostrar_categoria.sql" />
+    <Build Include="sp_buscar_categoria.sql" />
+    <Build Include="sp_insertar_categoria.sql" />
+    <Build Include="sp_editar_categoria.sql" />
+    <Build Include="sp_eliminar_categoria.sql" />
+    <Build Include="sp_anular_ingreso.sql" />
+    <Build Include="sp_buscar_articulo_nombre.sql" />
+    <Build Include="sp_buscar_cliente_apellidos.sql" />
+    <Build Include="sp_buscar_cliente_documento.sql" />
+    <Build Include="sp_buscar_ingreso_fecha.sql" />
+    <Build Include="sp_buscar_presentacion_nombre.sql" />
+    <Build Include="sp_buscar_prov_num_docto.sql" />
+    <Build Include="sp_buscar_prov_razon_social.sql" />
+    <Build Include="sp_buscar_trab_apellidos.sql" />
+    <Build Include="sp_buscar_trab_num_docto.sql" />
+    <Build Include="sp_buscar_venta_fecha.sql" />
+    <Build Include="sp_mostrar_trabajador.sql" />
+    <Build Include="sp_mostrar_proveedor.sql" />
   </ItemGroup>
 </Project>
