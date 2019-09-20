@@ -58,7 +58,6 @@ namespace CapaDatos
         Autor: Sergio Garcia Urbano
         Funcion: DesEncriptar una cadena.    
         */
-
         public string DesEncript(string pstrCadena)
         {
             string respuesta = "";
