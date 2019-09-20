@@ -1,8 +1,8 @@
 ﻿alter procedure sp_eliminar_categoria
-@v_id int
+@p_id int
 as
 begin
 	delete  t01_categoria
-	where f01_id = @v_id
+	where f01_id = @p_id
 end
 go

@@ -1,6 +1,6 @@
 ﻿alter procedure sp_buscar_ingreso_fecha
-@fecha1 varchar(50),
-@fecha2 varchar(50)
+@p_fecha1 varchar(50),
+@p_fecha2 varchar(50)
 as
 begin
 
@@ -18,7 +18,7 @@ begin
 	inner join t07_ingreso on f07_id = f08_id_ingreso 
 	inner join t04_trabajador on f04_id = f07_id_trabajador
 	inner join t05_proveedor on f05_id = f07_id_proveedor
-	where f07_fecha between @fecha1 and @fecha2
+	where f07_fecha between @p_fecha1 and @p_fecha2
 	group by f07_id, 
 		     f07_fecha,
 			 f07_tipo_comprobante,

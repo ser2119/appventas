@@ -1,12 +1,12 @@
 ﻿alter procedure sp_editar_categoria
-@v_id int,
-@v_nombre VARCHAR(50),
-@v_descripcion VARCHAR(2)
+@p_id int,
+@p_nombre VARCHAR(50),
+@p_descripcion VARCHAR(2)
 as
 begin
 	update  t01_categoria
-	set f01_nombre = @v_nombre, 
-	f01_descripcion = @v_descripcion 
-	where f01_id = @v_id
+	set f01_nombre = @p_nombre, 
+	f01_descripcion = @p_descripcion 
+	where f01_id = @p_id
 end
 go

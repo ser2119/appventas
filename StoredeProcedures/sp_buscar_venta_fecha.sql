@@ -1,6 +1,6 @@
 ﻿alter procedure sp_buscar_venta_fecha
-@fecha1 VARCHAR(50),
-@fecha2 VARCHAR(50)
+@p_fecha1 VARCHAR(50),
+@p_fecha2 VARCHAR(50)
 as
 begin
 
@@ -17,7 +17,7 @@ begin
 	inner join t09_venta on f09_id = f10_id_venta
 	inner join t04_trabajador on f04_id = f09_id_trabajador
 	inner join t03_cliente on f03_id = f09_id_cliente
-	where f09_fecha between @fecha1 and @fecha2
+	where f09_fecha between @p_fecha1 and @p_fecha2
 	group by f09_id,
 		   f04_nombre + ' ' + f04_apellidos,
 		   f03_nombre + ' ' + f03_apellidos,
