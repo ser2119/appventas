@@ -1,4 +1,4 @@
-﻿create procedure sp_editar_categoria
+﻿alter procedure sp_editar_categoria
 @v_id int,
 @v_nombre VARCHAR(50),
 @v_descripcion VARCHAR(2)

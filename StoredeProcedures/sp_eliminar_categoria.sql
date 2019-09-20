@@ -1,4 +1,4 @@
-﻿create procedure sp_eliminar_categoria
+﻿alter procedure sp_eliminar_categoria
 @v_id int
 as
 begin

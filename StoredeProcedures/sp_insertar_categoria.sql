@@ -1,4 +1,4 @@
-﻿create procedure sp_insertar_categoria
+﻿alter procedure sp_insertar_categoria
 @p_id int output,
 @v_nombre VARCHAR(50),
 @v_descripcion VARCHAR(2

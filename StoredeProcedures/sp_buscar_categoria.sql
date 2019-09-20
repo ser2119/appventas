@@ -1,4 +1,4 @@
-﻿create procedure sp_buscar_categoria
+﻿alter procedure sp_buscar_categoria
 @v_texto_buscar VARCHAR(50)
 as 
 begin

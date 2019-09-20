@@ -1,4 +1,4 @@
-﻿create procedure sp_mostrar_categorias
+﻿alter procedure sp_mostrar_categorias
 as
 begin 
 select top 200 * from  t01_categoria 
