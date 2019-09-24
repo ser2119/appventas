@@ -5,3 +5,4 @@ begin
 	from t04_trabajador
 	order by f04_id desc
 end
+go
