@@ -1,6 +1,8 @@
-﻿CREATE PROCEDURE [dbo].[sp_eliminar_articulo]
-	@param1 int = 0,
-	@param2 int
-AS
-	SELECT @param1, @param2
-RETURN 0
+﻿alter procedure sp_eliminar_articulo
+@p_id_articulo int
+as
+begin
+delete from t06_articulo
+where f06_id = @p_id_articulo
+end
+go

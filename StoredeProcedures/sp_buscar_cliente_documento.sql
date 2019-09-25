@@ -7,3 +7,4 @@ begin
 	where f03_num_documento like @p_texto_buscar + '%'
 	order by f03_id
 end
+go

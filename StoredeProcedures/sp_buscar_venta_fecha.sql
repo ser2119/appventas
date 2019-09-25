@@ -28,3 +28,5 @@ begin
 		   f09_igv
 	order by f09_fecha
 end
+go
+

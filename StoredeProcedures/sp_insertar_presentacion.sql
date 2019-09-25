@@ -1,6 +1,14 @@
-﻿CREATE PROCEDURE [dbo].[sp_insertar_presentacion]
-	@param1 int = 0,
-	@param2 int
-AS
-	SELECT @param1, @param2
-RETURN 0
+﻿alter procedure sp_insertar_presentacion
+@p_idpresentacion int output,
+@p_nombre varchar(50),
+@p_descripcion varchar(256)
+as
+begin
+insert into t02_presentacion(f02_nombre,
+							 f02_descripcion)
+			values (@p_nombre,
+				    @p_descripcion)
+end
+go
+
+
