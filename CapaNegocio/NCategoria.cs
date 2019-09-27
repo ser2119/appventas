@@ -75,7 +75,7 @@ namespace CapaNegocio
         public static DataTable Mostrar()
         {
             DCategoria objDCategoria = new DCategoria();
-            
+
             return objDCategoria.Mostrar();
         }
 

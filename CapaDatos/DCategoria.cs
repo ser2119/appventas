@@ -53,7 +53,7 @@ namespace CapaDatos
         public string Insertar(DCategoria pObjCategoria)
         {
             string vStrRpta = "";
-             try
+            try
             {
                 // Inicializa la conexion y llama al Procedimiento almacenado
                 objDb.AbrirConexion();
@@ -62,9 +62,9 @@ namespace CapaDatos
                 objDb.AgregarParametro(ComLeer, "@p_nombre", DbType.Int16, ParameterDirection.Output);
                 objDb.AgregarParametro(ComLeer, "@p_nombre", DbType.String, ParameterDirection.Input, 50, pObjCategoria.PrvStrNombre);
                 objDb.AgregarParametro(ComLeer, "@p_descripcion", DbType.String, ParameterDirection.Input, 250, pObjCategoria.PrvStrDescripcion);
-                vStrRpta = objDb.EjecutarCommandSp(ComLeer)==1?"OK":"No se ingreso el articulo";
+                vStrRpta = objDb.EjecutarCommandSp(ComLeer) == 1 ? "OK" : "No se ingreso el articulo";
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 vStrRpta = ex.Message;
             }
@@ -125,7 +125,7 @@ namespace CapaDatos
                 DbCommand ComLeer;
                 ComLeer = objDb.ConstruirComandoSp("sp_eliminar_categoria");
                 objDb.AgregarParametro(ComLeer, "@p_id", DbType.Int16, ParameterDirection.Input, pObjCategoria.PrvIntIdCategoria);
-                vStrRpta = objDb.EjecutarCommandSp(ComLeer) == 1? "OK" : "No se elimino el articulo";
+                vStrRpta = objDb.EjecutarCommandSp(ComLeer) == 1 ? "OK" : "No se elimino el articulo";
             }
             catch (Exception ex)
             {
@@ -153,7 +153,7 @@ namespace CapaDatos
                 // Inicializa la conexion y llama al Procedimiento almacenado
                 objDb.AbrirConexion();
                 DbCommand ComLeer;
-                
+
                 ComLeer = objDb.ConstruirComandoSp("sp_mostrar_articulo");
                 DtResultado = objDb.LlenarDataTable(ComLeer, DtResultado);
             }
