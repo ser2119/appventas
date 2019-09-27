@@ -56,6 +56,7 @@
             this.f_nombre = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.f_descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.f_eliminar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lbl_Total = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dt_Listado)).BeginInit();
@@ -88,6 +89,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.lbl_Total);
             this.tabPage1.Controls.Add(this.dt_Listado);
             this.tabPage1.Controls.Add(this.btn_Buscar);
             this.tabPage1.Controls.Add(this.btn_Imprimir);
@@ -117,7 +119,7 @@
             this.f_nombre,
             this.f_descripcion,
             this.f_eliminar});
-            this.dt_Listado.Location = new System.Drawing.Point(20, 57);
+            this.dt_Listado.Location = new System.Drawing.Point(20, 72);
             this.dt_Listado.MultiSelect = false;
             this.dt_Listado.Name = "dt_Listado";
             this.dt_Listado.ReadOnly = true;
@@ -133,6 +135,7 @@
             this.btn_Buscar.TabIndex = 5;
             this.btn_Buscar.Text = "&Buscar";
             this.btn_Buscar.UseVisualStyleBackColor = true;
+            this.btn_Buscar.Click += new System.EventHandler(this.btn_Buscar_Click);
             // 
             // btn_Imprimir
             // 
@@ -159,6 +162,7 @@
             this.txt_Buscar.Name = "txt_Buscar";
             this.txt_Buscar.Size = new System.Drawing.Size(249, 21);
             this.txt_Buscar.TabIndex = 1;
+            this.txt_Buscar.TextChanged += new System.EventHandler(this.txt_Buscar_TextChanged);
             // 
             // lbl_Nombre
             // 
@@ -329,6 +333,15 @@
             this.f_eliminar.Name = "f_eliminar";
             this.f_eliminar.ReadOnly = true;
             // 
+            // lbl_Total
+            // 
+            this.lbl_Total.AutoSize = true;
+            this.lbl_Total.Location = new System.Drawing.Point(543, 53);
+            this.lbl_Total.Name = "lbl_Total";
+            this.lbl_Total.Size = new System.Drawing.Size(111, 16);
+            this.lbl_Total.TabIndex = 7;
+            this.lbl_Total.Text = "Total Articulos: 0";
+            // 
             // FrmCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -382,5 +395,6 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn f_nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn f_descripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn f_eliminar;
+        private System.Windows.Forms.Label lbl_Total;
     }
 }

@@ -93,15 +93,41 @@ namespace CapaPresentacion
 
         /*
         * MostrarCategoria
-       */
+        */
         private void Mostrar()
         {
             this.dt_Listado.DataSource = NCategoria.Mostrar();
+            this.OcultarColumnas();
+            this.lbl_Total.Text = "Total Registros: " + dt_Listado.Rows.Count;
+        }
+
+        /*
+       * MostrarCategoriaNombre
+       */
+        private void BuscarNombre()
+        {
+            this.dt_Listado.DataSource = NCategoria.ConsultarNombre(this.txt_Buscar.Text);
+            this.OcultarColumnas();
+            this.lbl_Total.Text = "Total Registros: " + dt_Listado.Rows.Count;
         }
 
         private void FrmCategoria_Load(object sender, EventArgs e)
         {
+            this.Top = 0;
+            this.Left = 0;
+            this.Mostrar();
+            this.habilitar(false);
+            this.habilitarBotones();
+        }
 
+        private void btn_Buscar_Click(object sender, EventArgs e)
+        {
+            this.BuscarNombre();
+        }
+
+        private void txt_Buscar_TextChanged(object sender, EventArgs e)
+        {
+            this.BuscarNombre();
         }
     }
 }
