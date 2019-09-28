@@ -13,8 +13,8 @@ namespace CapaDatos
     {
         public DbProviderFactory prvObjProviderFactory;
         public DbConnection prvObjConnection;
-        public String prvStrProveedor = "SqlClient";
-        public String pubStrCadenaConexion = "data Source= CL-FE-SGU; Initial Catalog= dbventas; Integrated Security= true";
+        public String prvStrProveedor = "System.Data.SqlClient";
+        public String pubStrCadenaConexion = "data Source= CL-FE-SGU; Initial Catalog= dbventas; Persist Security Info=True; User ID=sgu;Password=Sa123456";
 
 
         /****************************

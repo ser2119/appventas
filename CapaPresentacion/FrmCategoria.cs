@@ -97,6 +97,8 @@ namespace CapaPresentacion
         private void Mostrar()
         {
             this.dt_Listado.DataSource = NCategoria.Mostrar();
+            this.dt_Listado.Columns[2].HeaderText = "Nombre";
+            this.dt_Listado.Columns[3].HeaderText = "Descripción";
             this.OcultarColumnas();
             this.lbl_Total.Text = "Total Registros: " + dt_Listado.Rows.Count;
         }
@@ -122,12 +124,26 @@ namespace CapaPresentacion
 
         private void btn_Buscar_Click(object sender, EventArgs e)
         {
-            this.BuscarNombre();
+            if (txt_Buscar.Text == "")
+            {
+                MessageBox.Show("Ingresa un nombre", "Sistema de Ventas", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                this.BuscarNombre();
+            }
         }
 
         private void txt_Buscar_TextChanged(object sender, EventArgs e)
         {
-            this.BuscarNombre();
+            if(txt_Buscar.Text == "") {
+                this.Mostrar();
+            }
+            else
+            {
+                this.BuscarNombre();
+            }
+            
         }
     }
 }

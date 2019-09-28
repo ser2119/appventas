@@ -89,7 +89,7 @@ namespace CapaNegocio
         public static DataTable ConsultarNombre(string pStrNombre)
         {
             DCategoria objDCategoria = new DCategoria();
-            objDCategoria.PrvStrNombre = pStrNombre;
+            objDCategoria.PrvStrTextoBuscar = pStrNombre;
 
             return objDCategoria.ConsultarNombre(objDCategoria);
         }

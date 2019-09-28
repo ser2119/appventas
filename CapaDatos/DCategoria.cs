@@ -154,7 +154,7 @@ namespace CapaDatos
                 objDb.AbrirConexion();
                 DbCommand ComLeer;
 
-                ComLeer = objDb.ConstruirComandoSp("sp_mostrar_articulo");
+                ComLeer = objDb.ConstruirComandoSp("sp_mostrar_categorias");
                 DtResultado = objDb.LlenarDataTable(ComLeer, DtResultado);
             }
             catch (Exception ex)

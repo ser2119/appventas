@@ -32,6 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.lbl_Total = new System.Windows.Forms.Label();
             this.dt_Listado = new System.Windows.Forms.DataGridView();
             this.btn_Buscar = new System.Windows.Forms.Button();
             this.btn_Imprimir = new System.Windows.Forms.Button();
@@ -52,11 +53,7 @@
             this.lblCodigo = new System.Windows.Forms.Label();
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
             this.tt_Mensaje = new System.Windows.Forms.ToolTip(this.components);
-            this.f_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.f_nombre = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.f_descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.f_eliminar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lbl_Total = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dt_Listado)).BeginInit();
@@ -104,6 +101,15 @@
             this.tabPage1.Text = "Inicio";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // lbl_Total
+            // 
+            this.lbl_Total.AutoSize = true;
+            this.lbl_Total.Location = new System.Drawing.Point(543, 53);
+            this.lbl_Total.Name = "lbl_Total";
+            this.lbl_Total.Size = new System.Drawing.Size(111, 16);
+            this.lbl_Total.TabIndex = 7;
+            this.lbl_Total.Text = "Total Articulos: 0";
+            // 
             // dt_Listado
             // 
             this.dt_Listado.AllowUserToAddRows = false;
@@ -115,9 +121,6 @@
             this.dt_Listado.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dt_Listado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dt_Listado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.f_id,
-            this.f_nombre,
-            this.f_descripcion,
             this.f_eliminar});
             this.dt_Listado.Location = new System.Drawing.Point(20, 72);
             this.dt_Listado.MultiSelect = false;
@@ -304,43 +307,12 @@
             // 
             this.tt_Mensaje.IsBalloon = true;
             // 
-            // f_id
-            // 
-            this.f_id.HeaderText = "Codigo";
-            this.f_id.Name = "f_id";
-            this.f_id.ReadOnly = true;
-            // 
-            // f_nombre
-            // 
-            this.f_nombre.FillWeight = 195.4452F;
-            this.f_nombre.HeaderText = "Nombre";
-            this.f_nombre.Name = "f_nombre";
-            this.f_nombre.ReadOnly = true;
-            this.f_nombre.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.f_nombre.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // f_descripcion
-            // 
-            this.f_descripcion.FillWeight = 253.8071F;
-            this.f_descripcion.HeaderText = "Descripción";
-            this.f_descripcion.Name = "f_descripcion";
-            this.f_descripcion.ReadOnly = true;
-            // 
             // f_eliminar
             // 
             this.f_eliminar.FillWeight = 50.74773F;
             this.f_eliminar.HeaderText = "Eliminar";
             this.f_eliminar.Name = "f_eliminar";
             this.f_eliminar.ReadOnly = true;
-            // 
-            // lbl_Total
-            // 
-            this.lbl_Total.AutoSize = true;
-            this.lbl_Total.Location = new System.Drawing.Point(543, 53);
-            this.lbl_Total.Name = "lbl_Total";
-            this.lbl_Total.Size = new System.Drawing.Size(111, 16);
-            this.lbl_Total.TabIndex = 7;
-            this.lbl_Total.Text = "Total Articulos: 0";
             // 
             // FrmCategoria
             // 
@@ -391,10 +363,7 @@
         private System.Windows.Forms.Button btn_Editar;
         private System.Windows.Forms.ErrorProvider errorIcono;
         private System.Windows.Forms.ToolTip tt_Mensaje;
-        private System.Windows.Forms.DataGridViewTextBoxColumn f_id;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn f_nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn f_descripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn f_eliminar;
         private System.Windows.Forms.Label lbl_Total;
+        private System.Windows.Forms.DataGridViewTextBoxColumn f_eliminar;
     }
 }
