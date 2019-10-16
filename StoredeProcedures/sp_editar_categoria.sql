@@ -1,7 +1,7 @@
-﻿alter procedure sp_editar_categoria
+﻿ALTER procedure sp_editar_categoria
 @p_id int,
 @p_nombre VARCHAR(50),
-@p_descripcion VARCHAR(2)
+@p_descripcion VARCHAR(250)
 as
 begin
 	update  t01_categoria
