@@ -59,7 +59,7 @@ namespace CapaDatos
                 objDb.AbrirConexion();
                 DbCommand ComLeer;
                 ComLeer = objDb.ConstruirComandoSp("sp_insertar_categoria");
-                objDb.AgregarParametro(ComLeer, "@p_nombre", DbType.Int16, ParameterDirection.Output);
+                objDb.AgregarParametro(ComLeer, "@p_id", DbType.Int16, ParameterDirection.Output);
                 objDb.AgregarParametro(ComLeer, "@p_nombre", DbType.String, ParameterDirection.Input, 50, pObjCategoria.PrvStrNombre);
                 objDb.AgregarParametro(ComLeer, "@p_descripcion", DbType.String, ParameterDirection.Input, 250, pObjCategoria.PrvStrDescripcion);
                 vStrRpta = objDb.EjecutarCommandSp(ComLeer) == 1 ? "OK" : "No se ingreso el articulo";
@@ -91,7 +91,7 @@ namespace CapaDatos
                 objDb.AbrirConexion();
                 DbCommand ComLeer;
                 ComLeer = objDb.ConstruirComandoSp("sp_editar_categoria");
-                objDb.AgregarParametro(ComLeer, "@p_id", DbType.Int16, ParameterDirection.Input, pObjCategoria.PrvIntIdCategoria);
+                objDb.AgregarParametro(ComLeer, "@p_id", DbType.Int16, ParameterDirection.Input, 100, pObjCategoria.PrvIntIdCategoria+"");
                 objDb.AgregarParametro(ComLeer, "@p_nombre", DbType.String, ParameterDirection.Input, 50, pObjCategoria.PrvStrNombre);
                 objDb.AgregarParametro(ComLeer, "@p_descripcion", DbType.String, ParameterDirection.Input, 250, pObjCategoria.PrvStrDescripcion);
                 vStrRpta = objDb.EjecutarCommandSp(ComLeer) == 1 ? "OK" : "No se actualizo el articulo";

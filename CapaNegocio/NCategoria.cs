@@ -42,12 +42,13 @@ namespace CapaNegocio
 
         public static string Editar(int pIntId, string pStrNombre, string pStrDescripcion)
         {
+            string vStr_rpta = "";
             DCategoria objDCategoria = new DCategoria();
             objDCategoria.PrvIntIdCategoria = pIntId;
             objDCategoria.PrvStrNombre = pStrNombre;
             objDCategoria.PrvStrDescripcion = pStrDescripcion;
 
-            return objDCategoria.Editar(objDCategoria);
+            return vStr_rpta = objDCategoria.Editar(objDCategoria);
         }
 
         /****************************

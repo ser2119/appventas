@@ -53,7 +53,6 @@
             this.lblCodigo = new System.Windows.Forms.Label();
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
             this.tt_Mensaje = new System.Windows.Forms.ToolTip(this.components);
-            this.f_eliminar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dt_Listado)).BeginInit();
@@ -75,13 +74,16 @@
             // 
             // tabControl1
             // 
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(19, 67);
+            this.tabControl1.Location = new System.Drawing.Point(12, 51);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(705, 355);
+            this.tabControl1.Size = new System.Drawing.Size(712, 371);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage1
@@ -93,18 +95,23 @@
             this.tabPage1.Controls.Add(this.btn_Eliminar);
             this.tabPage1.Controls.Add(this.txt_Buscar);
             this.tabPage1.Controls.Add(this.lbl_Nombre);
+            this.errorIcono.SetIconAlignment(this.tabPage1, System.Windows.Forms.ErrorIconAlignment.BottomRight);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(697, 326);
+            this.tabPage1.Size = new System.Drawing.Size(704, 342);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Inicio";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // lbl_Total
             // 
+            this.lbl_Total.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Total.AutoSize = true;
-            this.lbl_Total.Location = new System.Drawing.Point(543, 53);
+            this.errorIcono.SetIconAlignment(this.lbl_Total, System.Windows.Forms.ErrorIconAlignment.MiddleLeft);
+            this.lbl_Total.Location = new System.Drawing.Point(570, 53);
             this.lbl_Total.Name = "lbl_Total";
             this.lbl_Total.Size = new System.Drawing.Size(111, 16);
             this.lbl_Total.TabIndex = 7;
@@ -120,15 +127,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dt_Listado.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dt_Listado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dt_Listado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.f_eliminar});
             this.dt_Listado.Location = new System.Drawing.Point(20, 72);
             this.dt_Listado.MultiSelect = false;
             this.dt_Listado.Name = "dt_Listado";
             this.dt_Listado.ReadOnly = true;
             this.dt_Listado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dt_Listado.Size = new System.Drawing.Size(663, 248);
+            this.dt_Listado.Size = new System.Drawing.Size(670, 264);
             this.dt_Listado.TabIndex = 6;
+            this.dt_Listado.DoubleClick += new System.EventHandler(this.MostrarArticuloTabControl);
             // 
             // btn_Buscar
             // 
@@ -183,7 +189,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(697, 326);
+            this.tabPage2.Size = new System.Drawing.Size(704, 342);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Manipulación";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -216,6 +222,7 @@
             this.btn_Guardar.TabIndex = 9;
             this.btn_Guardar.Text = "&Guardar";
             this.btn_Guardar.UseVisualStyleBackColor = true;
+            this.btn_Guardar.Click += new System.EventHandler(this.btn_Guardar_Click);
             // 
             // btn_Cancelar
             // 
@@ -234,6 +241,7 @@
             this.btn_Editar.TabIndex = 7;
             this.btn_Editar.Text = "&Editar";
             this.btn_Editar.UseVisualStyleBackColor = true;
+            this.btn_Editar.Click += new System.EventHandler(this.btn_Editar_Click);
             // 
             // btn_Nuevo
             // 
@@ -243,6 +251,7 @@
             this.btn_Nuevo.TabIndex = 6;
             this.btn_Nuevo.Text = "&Nuevo";
             this.btn_Nuevo.UseVisualStyleBackColor = true;
+            this.btn_Nuevo.Click += new System.EventHandler(this.btn_Nuevo_Click);
             // 
             // txt_Descripcion
             // 
@@ -307,13 +316,6 @@
             // 
             this.tt_Mensaje.IsBalloon = true;
             // 
-            // f_eliminar
-            // 
-            this.f_eliminar.FillWeight = 50.74773F;
-            this.f_eliminar.HeaderText = "Eliminar";
-            this.f_eliminar.Name = "f_eliminar";
-            this.f_eliminar.ReadOnly = true;
-            // 
             // FrmCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -364,6 +366,5 @@
         private System.Windows.Forms.ErrorProvider errorIcono;
         private System.Windows.Forms.ToolTip tt_Mensaje;
         private System.Windows.Forms.Label lbl_Total;
-        private System.Windows.Forms.DataGridViewTextBoxColumn f_eliminar;
     }
 }
